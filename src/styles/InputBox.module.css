@@ -1,0 +1,31 @@
+.inputBox_container {
+  width: 512px;
+  height: 35px;
+  background-color: #f9ecd9;
+  display: flex;
+  justify-content: center;
+}
+.inputBox {
+  width: 400px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #cfc69f;
+  display: flex;
+  justify-content: center;
+}
+.inputBox::placeholder {
+  color: black;
+  font-size: 18px;
+  padding-left: 20px;
+
+  font-weight: 600;
+}
+.plusButton {
+  border: 0;
+  color: #cfc69f;
+  font-size: 32px;
+  background-color: #67863a;
+  border-radius: 10px;
+  width: 40px;
+  margin-left: 10px;
+}

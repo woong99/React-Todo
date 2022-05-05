@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# React-TodoList v1.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+투두리스트틀 만들고 업데이트 시키면서 리액트의 기초부터 공부!!
 
-## Available Scripts
+[배포 페이지 (Netlify)](https://storied-puffpuff-a9206d.netlify.app/)
 
-In the project directory, you can run:
+## 미리 보기
 
-### `npm start`
+###
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![스크린샷 2022-05-05 오후 1 38 29](https://user-images.githubusercontent.com/76946536/166864457-ae5b4adf-f67a-4481-a32a-98140d29339f.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 주요 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 날짜 기능
 
-### `npm run build`
+![스크린샷 2022-05-05 오후 1 42 24](https://user-images.githubusercontent.com/76946536/166864642-bb0d533a-7d47-4512-a985-194a12bc6872.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `new Date()` 를 이용해 날짜를 나타내었다.
+- 추후에는 시계 기능을 추가할 것이다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 일정 관리 기능
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![스크린샷 2022-05-05 오후 1 44 31](https://user-images.githubusercontent.com/76946536/166864755-46f93552-be73-4833-a22e-b39480cf88d8.png)
 
-### `npm run eject`
+- 입력창을 통해 일정을 추가할 수 있다.
+- 왼쪽 체크 박스를 통해 완료한 일과 완료하지 않은 일로 구분할 수 있다.
+- 각 일정의 오른쪽에 마우스를 갖다대면 X 버튼이 나와 클릭 시 해당 일정이 삭제된다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 구조
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![그림1](https://user-images.githubusercontent.com/76946536/166865626-a5895b05-9124-45e2-a7ca-82ca8f34aea3.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+public/
+index.js
+index.css
+src
+├──components # 컴포넌트들
+├──pages # 페이지들
+├──store # Context API를 사용하기 위한 디렉토리
+└──Styles # css 파일들
+```
 
-## Learn More
+## 사용 기술
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- JS (ES5+)
+- React
+- React Hooks
+- css (css modules)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 업데이트 예정
 
-### Code Splitting
+- 날씨 기능
+- 현재 시간 기능
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 배운 점
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Context API를 통한 전역 상태 관리에 대해 배울 수 있었고, map 함수를 이용한 컴포넌트 반복 출력을 배울 수 있었다. 다음 버전에서는 날씨 기능과 현재 시간 기능을 추가할 것이고, 추후에는 Context API 대신 Redux를 도입해 볼 것이다. 조금 더 React에 대해 공부하여 최적화까지 해 볼 것이다.

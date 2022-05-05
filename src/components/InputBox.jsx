@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { UserContext } from '../store/Datas';
 import styles from '../styles/InputBox.module.css';
 
@@ -6,8 +6,10 @@ const InputBox = () => {
   const context = useContext(UserContext);
   const { datas, setDatas } = context;
   const [input, setInput] = useState('');
+  const id = useRef(3);
   const click = () => {
-    setDatas([...datas, input]);
+    setDatas([...datas, { input, checked: false, id: id.current }]);
+    id.current += 1;
     setInput('');
   };
   const onChangeInput = (e) => {

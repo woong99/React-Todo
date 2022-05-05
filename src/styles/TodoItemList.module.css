@@ -1,4 +1,4 @@
 .todoItemListContainer {
   background-color: #f9ecd9;
-  height: 500px;
+  min-height: 500px;
 }

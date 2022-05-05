@@ -13,10 +13,14 @@
   border: 0;
   border-radius: 30px;
   background-color: #cfc69f;
+  outline: none;
 }
 .inputBox::placeholder {
   color: black;
   padding-left: 20px;
+}
+.inputBox:hover {
+  outline: none;
 }
 .plusButton {
   border: 0;

@@ -5,7 +5,6 @@ export function weatherView(props) {
   const request = axios
     .get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
     .then((response) => {
-      console.log(response);
       return response;
     });
   return request;

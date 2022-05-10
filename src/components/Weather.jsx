@@ -5,17 +5,13 @@ import useWeather from '../hooks/useWeather';
 const Weather = () => {
   const { temp, icon, loading } = useWeather();
   return (
-    <div className={styles.container}>
+    <div>
       {loading ? (
         <Loading />
       ) : (
-        <div>
-          <img
-            src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
-            alt="weather"
-            className={styles.icon}
-          />
-          <p>{temp}</p>
+        <div className={styles.container}>
+          <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="weather" />
+          <p>{temp}°C</p>
         </div>
       )}
     </div>

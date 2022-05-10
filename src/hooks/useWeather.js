@@ -22,7 +22,6 @@ export default function useWeather() {
     axios
       .get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`)
       .then((response) => {
-        console.log(response);
         setTemp(parseInt(response.data.main.temp - 273.15));
         setIcon(response.data.weather[0].icon);
         setLoading(false);
@@ -30,6 +29,7 @@ export default function useWeather() {
   };
   useEffect(() => {
     requestCoords();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { temp, icon, loading };

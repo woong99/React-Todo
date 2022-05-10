@@ -1,5 +1,4 @@
-import styles from './styles/App.module.css';
-import './App.css';
+import styles from './App.module.css';
 import Home from './pages/Home';
 import Datas from './store/Datas';
 

@@ -1,4 +1,4 @@
-# React-TodoList v1.0
+# React-TodoList v1.5
 
 투두리스트틀 만들고 업데이트 시키면서 리액트의 기초부터 공부!!
 

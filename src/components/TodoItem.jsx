@@ -15,7 +15,7 @@ const TodoItem = ({ value }) => {
   };
   return (
     <div className={styles.todoItem}>
-      {value.checked === true ? (
+      {value.checked ? (
         <AiFillCheckSquare color="#67863a" size="32px" onClick={onEdit} />
       ) : (
         <AiOutlineBorder color="#67863a" size="32px" onClick={onEdit} />

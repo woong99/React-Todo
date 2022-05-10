@@ -8,7 +8,7 @@
 
 ###
 
-![스크린샷 2022-05-05 오후 1 38 29](https://user-images.githubusercontent.com/76946536/166864457-ae5b4adf-f67a-4481-a32a-98140d29339f.png)
+<img width="1434" alt="스크린샷 2022-05-10 오후 5 31 10" src="https://user-images.githubusercontent.com/76946536/167585153-cc63df88-0949-4f02-9503-a4d0859e6fb5.png">
 
 ---
 
@@ -28,6 +28,14 @@
 - 입력창을 통해 일정을 추가할 수 있다.
 - 왼쪽 체크 박스를 통해 완료한 일과 완료하지 않은 일로 구분할 수 있다.
 - 각 일정의 오른쪽에 마우스를 갖다대면 X 버튼이 나와 클릭 시 해당 일정이 삭제된다.
+
+### 날씨 기능
+
+<img width="177" alt="스크린샷 2022-05-10 오후 5 32 27" src="https://user-images.githubusercontent.com/76946536/167585380-141bf00f-0ac2-45fe-88e1-8dbc5f79cfe6.png">
+
+- 현재 위치의 날씨와 기온을 알 수 있다.
+- geolocation을 이용해 현재 위치의 좌표를 받아온다.
+- openweathermapAPI를 이용해 현재 날씨를 받아온다.
 
 ---
 

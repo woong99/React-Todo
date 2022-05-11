@@ -1,20 +1,19 @@
-.header_container {
-  width: 512px;
-  padding-top: 20px;
-  /* height: 50px; */
-  background-color: #f9ecd9;
+.container {
+  background-color: #8b9d68;
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+}
+
+.container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-.header_container p {
-  margin-bottom: -20px;
-  color: #976101;
-  font-weight: 700;
-}
-.header_container h1 {
-  font-family: 'Kanit', sans-serif;
-  color: #88b14b;
-  margin-bottom: 0;
   margin-top: 0;
-  font-size: 60px;
-  font-weight: 500;
+  height: 100%;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
 }

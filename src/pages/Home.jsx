@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import InputHeader from '../components/InputHeader';
 import Info from '../components/Info';
 import InputBox from '../components/InputBox';
 import TodoCount from '../components/TodoCount';
@@ -15,7 +15,7 @@ const Home = () => {
         <Weather />
       </div>
       <div className={styles.right}>
-        <Header />
+        <InputHeader />
         <InputBox />
         <TodoCount />
         <TodoItemList />

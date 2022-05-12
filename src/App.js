@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 import Datas from './store/Datas';
-import Router from './Router';
+import Router from './router/Router';
 
 function App() {
   return (

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../store/Datas';
 import styles from '../styles/Header.module.css';
 
 const Header = () => {
+  // const { user } = useContext(UserContext);
   return (
+    // <div className={styles.container}>{user ? <p>{user}'s To Do List</p> : <p>To Do List</p>}</div>
     <div className={styles.container}>
-      <p>Woong's To Do List</p>
+      <p>woong</p>
     </div>
   );
 };

@@ -3,15 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../store/Datas';
 import styles from '../styles/LoginForm.module.css';
 const LoginForm = () => {
-  const { users } = useContext(UserContext);
+  const { users, setUser } = useContext(UserContext);
   const id = useRef();
   const pwd = useRef();
   const navigate = useNavigate();
   const onLogin = () => {
     let isChecked = false;
-    users.forEach((user) => {
+    users.forEach((user, index) => {
       if (id.current.value === user.id && pwd.current.value === user.pwd) {
         isChecked = true;
+        setUser(users[index]);
       }
     });
     if (isChecked === true) {

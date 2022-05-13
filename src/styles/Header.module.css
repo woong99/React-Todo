@@ -1,7 +1,7 @@
 .container {
   background-color: #8b9d68;
   width: 100%;
-  height: 40px;
+  height: 50px;
   position: fixed;
   top: 0;
 }
@@ -15,5 +15,6 @@
   height: 100%;
   color: white;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 30px;
+  font-family: 'Kanit', sans-serif;
 }

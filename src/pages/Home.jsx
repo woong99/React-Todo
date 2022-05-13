@@ -7,7 +7,6 @@ import TodoItemList from '../components/TodoItemList';
 import Weather from '../components/Weather';
 import styles from '../styles/Home.module.css';
 import Header from '../components/Header';
-import { useParams } from 'react-router-dom';
 
 const Home = () => {
   return (

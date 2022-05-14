@@ -26,6 +26,9 @@ const SignUpForm = () => {
   const onImg = () => {
     setImgCheck('선택 완료');
   };
+  const onBack = () => {
+    navigate('/');
+  };
 
   return (
     <div className={styles.container}>
@@ -55,6 +58,7 @@ const SignUpForm = () => {
           />
         </div>
         <button onClick={onSignUp}>회원가입</button>
+        <button onClick={onBack}>뒤로가기</button>
       </div>
     </div>
   );

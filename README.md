@@ -1,4 +1,4 @@
-# React-TodoList v1.5
+# React-TodoList v2.0
 
 투두리스트틀 만들고 업데이트 시키면서 리액트의 기초부터 공부!!
 
@@ -8,7 +8,7 @@
 
 ###
 
-<img width="1434" alt="스크린샷 2022-05-10 오후 5 31 10" src="https://user-images.githubusercontent.com/76946536/167585153-cc63df88-0949-4f02-9503-a4d0859e6fb5.png">
+<img width="1436" alt="스크린샷 2022-05-14 오후 1 26 04" src="https://user-images.githubusercontent.com/76946536/168410612-8b65b95f-e486-46f5-a063-002c244fc212.png">
 
 ---
 
@@ -37,11 +37,26 @@
 - geolocation을 이용해 현재 위치의 좌표를 받아온다.
 - openweathermapAPI를 이용해 현재 날씨를 받아온다.
 
+### 🎯 로그인 기능
+
+<img width="450" alt="스크린샷 2022-05-14 오후 1 27 24" src="https://user-images.githubusercontent.com/76946536/168410638-2943912d-dbdb-4e02-9191-c593842afd4b.png">
+
+- react-router-dom을 도입해 로그인 기능을 구현해보았다.
+- 아직은 백엔드도 없고 DB도 없기 때문에 임시로 Context API에서 상태를 관리해 로그인하는 방식이다.
+
+### 🎯회원가입 기능
+
+<img width="450" alt="스크린샷 2022-05-14 오후 1 28 55" src="https://user-images.githubusercontent.com/76946536/168410667-3cc804a4-2bba-4a34-aa20-d97a240c857f.png">
+
+- 이름과 사진을 입력받아 메인 페이지에서 사용자 UI로 이용한다.
+
 ---
 
 ## 🧩 구조 🧩
 
-![그림1](https://user-images.githubusercontent.com/76946536/167628351-bea99977-e049-4281-9ded-7ea19dca6091.png)
+### Main Page
+
+![그림1](https://user-images.githubusercontent.com/76946536/168410934-bf9d4d9a-ec15-47f0-af0e-f195fd86bbae.png)
 
 ```
 public/
@@ -53,6 +68,7 @@ src
 ├──store # Context API를 사용하기 위한 디렉토리
 ├──hooks # 커스텀 훅을 위한 디렉토리
 ├──assets # 사진 파일을 위한 디렉토리
+├──router # 라우터를 위한 디렉토리
 └──Styles # css 파일들
 ```
 

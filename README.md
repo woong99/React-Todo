@@ -56,7 +56,15 @@
 
 ### Main Page
 
-![그림1](https://user-images.githubusercontent.com/76946536/168410934-bf9d4d9a-ec15-47f0-af0e-f195fd86bbae.png)
+![Main](https://user-images.githubusercontent.com/76946536/168410934-bf9d4d9a-ec15-47f0-af0e-f195fd86bbae.png)
+
+### Login Page
+
+![Login](https://user-images.githubusercontent.com/76946536/168411014-02dfdb79-4c34-4edd-b4a5-e317919789c0.png)
+
+### SignUp Page
+
+![SignUp](https://user-images.githubusercontent.com/76946536/168411054-b1c1a4d8-90a7-4b9d-8ce1-6718c915f28a.png)
 
 ```
 public/
@@ -80,6 +88,7 @@ src
 - React
 - React Hooks
 - css (css modules)
+- react-router-dom v6
 
 ---
 
@@ -90,6 +99,9 @@ src
 - Context API
 - axios를 통한 API 호출
 - 비동기 처리 (Promise, async & await)
+- react-router-dom을 이용한 router 처리
+  - localStorage를 이용한 PrivateRoute
+- input[file]을 이용한 사진 업로드
 
 ---
 
@@ -101,4 +113,4 @@ src
 
 ## 🎖 배운 점 🎖
 
-axios를 통한 API 호출을 배웠고, 그 과정에서 비동기 처리에 대한 학습을 하였다. 또한 해당 로직을 커스텀 훅으로 만들어 분리하면서 코드를 더 깔끔하고 유지 보수를 편하게 만들었다.
+react-router-dom을 이용해 로그인, 회원가입 페이지를 추가하여 라우팅 기능을 학습했다. 해당 과정에서 URL 직접 접근을 막기 위해 localStorage를 이용해 접근 제한을 구현해보았다. 또한, input 태그의 file 타입을 이용한 사진 업로드 기능을 구현했다. 아직은 백엔드부분이 없지만 언젠가는 백엔드도 공부해서 서버 쪽에서 처리하는 방식을 배워보고싶다.

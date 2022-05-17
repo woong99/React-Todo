@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { UserContext } from '../store/Datas';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import styles from '../styles/TodoItemList.module.css';
 import TodoItem from './TodoItem';
 const TodoItemList = () => {
-  const { datas } = useContext(UserContext);
-  const dataList = datas.map((data, index) => <TodoItem value={data} key={index} />);
-  return <div className={styles.todoItemListContainer}>{dataList}</div>;
+  const todos = useSelector((state) => state.todos);
+  const dataLists = todos.map((data, index) => <TodoItem todo={data} key={index} />);
+  return <div className={styles.todoItemListContainer}>{dataLists}</div>;
 };
 
 export default TodoItemList;

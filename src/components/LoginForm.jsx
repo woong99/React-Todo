@@ -1,8 +1,11 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addTodo } from '../redux/actions';
 import { UserContext } from '../store/Datas';
 import styles from '../styles/LoginForm.module.css';
 const LoginForm = () => {
+  const dispatch = useDispatch();
   const { users, setUser } = useContext(UserContext);
   const id = useRef();
   const pwd = useRef();
@@ -25,6 +28,7 @@ const LoginForm = () => {
   const onSignUp = () => {
     navigate('./signUp');
   };
+
   return (
     <div className={styles.container}>
       {/* <form action=""> */}

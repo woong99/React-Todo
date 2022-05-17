@@ -1,27 +1,26 @@
-import React, { useContext } from 'react';
-import { UserContext } from '../store/Datas';
+import React from 'react';
 import styles from '../styles/TodoItem.module.css';
 import { AiFillCheckSquare, AiOutlineBorder, AiOutlineCloseSquare } from 'react-icons/ai';
+import { useDispatch } from 'react-redux';
+import { completeTodo, removeTodo } from '../redux/actions';
 
-const TodoItem = ({ value }) => {
-  const { datas, setDatas } = useContext(UserContext);
+const TodoItem = ({ todo }) => {
+  const dispatch = useDispatch();
   const onEdit = () => {
-    setDatas(
-      datas.map((data) => (data.id === value.id ? { ...data, checked: !value.checked } : data)),
-    );
+    dispatch(completeTodo(todo.id));
   };
   const onRemove = () => {
-    setDatas(datas.filter((data) => data.id !== value.id));
+    dispatch(removeTodo(todo.id));
   };
   return (
     <div className={styles.todoItem}>
-      {value.checked ? (
+      {todo.done ? (
         <AiFillCheckSquare color="#67863a" size="32px" onClick={onEdit} />
       ) : (
         <AiOutlineBorder color="#67863a" size="32px" onClick={onEdit} />
       )}
 
-      <p>{value.input}</p>
+      <p>{todo.text}</p>
       <AiOutlineCloseSquare
         size="32px"
         color="#67863a"

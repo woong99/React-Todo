@@ -5,8 +5,8 @@ const Info = () => {
   const { user } = useContext(UserContext);
   return (
     <div className={styles.container}>
-      <img src={user.img} alt="얼굴" width="200px" height="200px" />
-      <p>{user.name}</p>
+      {/* <img src={user.img} alt="얼굴" width="200px" height="200px" /> */}
+      {/* <p>{user.name}</p> */}
     </div>
   );
 };

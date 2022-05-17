@@ -1,14 +1,14 @@
-import React, { useState, useContext, useRef } from 'react';
-import { UserContext } from '../store/Datas';
+import React, { useState, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../redux/actions';
 import styles from '../styles/InputBox.module.css';
 
 const InputBox = () => {
-  const context = useContext(UserContext);
-  const { datas, setDatas } = context;
+  const dispatch = useDispatch();
   const [input, setInput] = useState('');
   const id = useRef(3);
   const click = () => {
-    setDatas([...datas, { input, checked: false, id: id.current }]);
+    dispatch(addTodo(input, id.current));
     id.current += 1;
     setInput('');
   };

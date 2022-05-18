@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useFirebase } from 'react-redux-firebase';
 import { useNavigate } from 'react-router-dom';
 import { addUser } from '../redux/modules/user';
 import styles from '../styles/LoginForm.module.css';
 const LoginForm = () => {
+  const firebase = useFirebase();
   const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const id = useRef();
@@ -28,6 +30,12 @@ const LoginForm = () => {
     navigate('./signUp');
   };
 
+  const sighInWithGoogle = () => {
+    firebase.login({ provider: 'google', type: 'popup' }).then(() => {
+      navigate('./main');
+    });
+  };
+
   return (
     <div className={styles.container}>
       {/* <form action=""> */}
@@ -38,6 +46,7 @@ const LoginForm = () => {
         <input type="text" placeholder="아이디" name="username" ref={id} />
         <input type="password" placeholder="비밀번호" name="password" ref={pwd} />
         <button onClick={onLogin}>로그인</button>
+        <button onClick={sighInWithGoogle}>구글로그인</button>
         <button onClick={onSignUp}>회원가입</button>
       </div>
       {/* </form> */}

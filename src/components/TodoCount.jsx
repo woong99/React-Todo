@@ -4,7 +4,6 @@ import styles from '../styles/TodoCount.module.css';
 
 const TodoCount = () => {
   const todos = useSelector((state) => state.todos);
-  console.log(todos);
   let cnt = 0;
   todos.map((todo) => (todo.done === false ? (cnt += 1) : (cnt += 0)));
   return (

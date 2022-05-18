@@ -10,7 +10,6 @@ const LoginForm = () => {
   const pwd = useRef();
   const navigate = useNavigate();
   const onLogin = () => {
-    console.log(users);
     let isChecked = false;
     users.forEach((user, index) => {
       if (id.current.value === user.id && pwd.current.value === user.pwd) {

@@ -1,4 +1,4 @@
-# React-TodoList v2.0
+# React-TodoList v2.5
 
 투두리스트틀 만들고 업데이트 시키면서 리액트의 기초부터 공부!!
 
@@ -73,7 +73,7 @@ index.css
 src
 ├──components # 컴포넌트들
 ├──pages # 페이지들
-├──store # Context API를 사용하기 위한 디렉토리
+├──redux # Redux를 사용하기 위한 디렉토리
 ├──hooks # 커스텀 훅을 위한 디렉토리
 ├──assets # 사진 파일을 위한 디렉토리
 ├──router # 라우터를 위한 디렉토리
@@ -89,6 +89,9 @@ src
 - React Hooks
 - css (css modules)
 - react-router-dom v6
+- redux
+- react-redux
+- redux-actions
 
 ---
 
@@ -102,15 +105,19 @@ src
 - react-router-dom을 이용한 router 처리
   - localStorage를 이용한 PrivateRoute
 - input[file]을 이용한 사진 업로드
+- redux를 이용한 전역 상태 관리
+- react-redux를 통해 컴포넌트와 리덕스를 연결
+- redux ducks pattern
+- redux-actions를 이용해 모듈화 및 ducks pattern 적용
 
 ---
 
 ## 🤪 업데이트 예정 🤪
 
-- Context API -> Redux
+- FireBase를 이용한 DB 관리 및 auth 구현
 
 ---
 
 ## 🎖 배운 점 🎖
 
-react-router-dom을 이용해 로그인, 회원가입 페이지를 추가하여 라우팅 기능을 학습했다. 해당 과정에서 URL 직접 접근을 막기 위해 localStorage를 이용해 접근 제한을 구현해보았다. 또한, input 태그의 file 타입을 이용한 사진 업로드 기능을 구현했다. 아직은 백엔드부분이 없지만 언젠가는 백엔드도 공부해서 서버 쪽에서 처리하는 방식을 배워보고싶다.
+Context API와 redux의 차이점을 공부하고 redux의 사용법부터 심화 과정까지 공부할 수 있었다. Context API와 크게 다른 점은 없어서 쉽게 배울 수 있었다. 아직은 redux를 이용한 비동기 처리는 사용하지 않았지만 나중에는 react-sage까지 공부할 예정이다.

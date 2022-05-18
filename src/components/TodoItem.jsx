@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/TodoItem.module.css';
 import { AiFillCheckSquare, AiOutlineBorder, AiOutlineCloseSquare } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
-import { completeTodo, removeTodo } from '../redux/actions';
+import { completeTodo, removeTodo } from '../redux/modules/todos';
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();

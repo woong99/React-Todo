@@ -1,21 +1,21 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addTodo } from '../redux/actions';
-import { UserContext } from '../store/Datas';
+import { addUser } from '../redux/modules/user';
 import styles from '../styles/LoginForm.module.css';
 const LoginForm = () => {
+  const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
-  const { users, setUser } = useContext(UserContext);
   const id = useRef();
   const pwd = useRef();
   const navigate = useNavigate();
   const onLogin = () => {
+    console.log(users);
     let isChecked = false;
     users.forEach((user, index) => {
       if (id.current.value === user.id && pwd.current.value === user.pwd) {
         isChecked = true;
-        setUser(users[index]);
+        dispatch(addUser(users[index]));
       }
     });
     if (isChecked === true) {

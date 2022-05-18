@@ -1,26 +1,19 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { UserContext } from '../store/Datas';
+import { addAccount } from '../redux/modules/users';
 import styles from '../styles/SignUpForm.module.css';
 
 const SignUpForm = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { users, setUsers } = useContext(UserContext);
   const [imgCheck, setImgCheck] = useState('');
   const name = useRef();
   const id = useRef();
   const pwd = useRef();
   const userImg = useRef();
   const onSignUp = () => {
-    setUsers([
-      ...users,
-      {
-        name: name.current.value,
-        id: id.current.value,
-        pwd: pwd.current.value,
-        img: URL.createObjectURL(userImg.current.files[0]),
-      },
-    ]);
+    dispatch(addAccount([name.current.value, id.current.value, pwd.current.value]));
     navigate('/');
   };
   const onImg = () => {

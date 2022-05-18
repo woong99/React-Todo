@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../redux/actions';
+import { addTodo } from '../redux/modules/todos';
 import styles from '../styles/InputBox.module.css';
 
 const InputBox = () => {
@@ -8,7 +8,7 @@ const InputBox = () => {
   const [input, setInput] = useState('');
   const id = useRef(3);
   const click = () => {
-    dispatch(addTodo(input, id.current));
+    dispatch(addTodo([input, id.current]));
     id.current += 1;
     setInput('');
   };

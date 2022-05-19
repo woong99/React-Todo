@@ -1,6 +1,6 @@
 import firebase from 'firebase/compat/app';
 import { createFirestoreInstance } from 'redux-firestore';
-import 'firebase/auth';
+import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import store from './redux/store';
 

@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
-import rrfProps, { firebaseConfig } from './firebase';
-import firebase from 'firebase/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import rrfProps from './firebase';
 
+const state = () => {
+  console.log(store.getState());
+};
+store.subscribe(state);
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// firebase.initializeApp(firebaseConfig);
-// firebase.firestore();
 root.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps}>

@@ -1,13 +1,25 @@
 import React, { useState, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useFirestore } from 'react-redux-firebase';
 import { addTodo } from '../redux/modules/todos';
 import styles from '../styles/InputBox.module.css';
 
 const InputBox = () => {
+  const { uid } = useSelector((state) => state.firebase.auth);
+  const firestore = useFirestore();
   const dispatch = useDispatch();
   const [input, setInput] = useState('');
   const id = useRef(3);
   const click = () => {
+    firestore
+      .collection('users')
+      .doc(uid)
+      .collection('todos')
+      .add({ title: input, isDone: false })
+      .then((docRef) => {
+        docRef.update({ todoID: docRef.id });
+      });
+
     dispatch(addTodo([input, id.current]));
     id.current += 1;
     setInput('');

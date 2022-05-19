@@ -30,12 +30,14 @@ const LoginForm = () => {
     navigate('./signUp');
   };
 
-  const sighInWithGoogle = () => {
-    firebase.login({ provider: 'google', type: 'popup' }).then(() => {
+  const signInWithGoogle = () => {
+    return firebase.login({ provider: 'google', type: 'popup' }).then(() => {
       navigate('./main');
     });
   };
 
+  const auth = useSelector((state) => state.firebase.auth);
+  console.log(auth);
   return (
     <div className={styles.container}>
       {/* <form action=""> */}
@@ -46,7 +48,7 @@ const LoginForm = () => {
         <input type="text" placeholder="아이디" name="username" ref={id} />
         <input type="password" placeholder="비밀번호" name="password" ref={pwd} />
         <button onClick={onLogin}>로그인</button>
-        <button onClick={sighInWithGoogle}>구글로그인</button>
+        <button onClick={signInWithGoogle}>구글로그인</button>
         <button onClick={onSignUp}>회원가입</button>
       </div>
       {/* </form> */}

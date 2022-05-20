@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useFirebase } from 'react-redux-firebase';
+// import { useFirebase } from 'react-redux-firebase';
 import { useNavigate } from 'react-router-dom';
 import { addUser } from '../redux/modules/user';
 import styles from '../styles/LoginForm.module.css';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from '@firebase/auth';
+
 const LoginForm = () => {
-  const firebase = useFirebase();
   const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const id = useRef();
@@ -31,13 +32,14 @@ const LoginForm = () => {
   };
 
   const signInWithGoogle = () => {
-    return firebase.login({ provider: 'google', type: 'popup' }).then(() => {
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+    signInWithPopup(auth, provider).then((result) => {
+      dispatch(addUser(result.user.uid));
       navigate('./main');
     });
   };
 
-  const auth = useSelector((state) => state.firebase.auth);
-  console.log(auth);
   return (
     <div className={styles.container}>
       {/* <form action=""> */}

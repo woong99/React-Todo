@@ -17,6 +17,8 @@ export const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.firestore();
+export const firebaseInstance = firebase;
+export const authService = firebase.auth();
 
 const rrfConfig = {
   userProfile: 'users',

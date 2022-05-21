@@ -38,7 +38,6 @@ export const loadTodoFB = (uid) => {
 };
 
 export const addTodoFB = (uid, todo) => {
-  console.log(todo);
   return async function (dispatch) {
     const dataFB = await addDoc(collection(getFirestore(), `users/${uid}/todos`), todo);
     await updateDoc(doc(getFirestore(), `users/${uid}/todos`, dataFB.id), { todoID: dataFB.id });

@@ -1,26 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from '../styles/TodoItem.module.css';
 import { AiFillCheckSquare, AiOutlineBorder, AiOutlineCloseSquare } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
-import { useFirestore } from 'react-redux-firebase';
-import { loadBucketFB, removeTodoFB } from '../redux/modules/bucket';
+import { changeTodoFB, removeTodoFB } from '../redux/modules/todos';
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
   const uid = useSelector((state) => state.user);
-  const firestore = useFirestore();
-  const { uidd } = useSelector((state) => state.firebase.auth);
   const onEdit = () => {
-    firestore
-      .collection('users')
-      .doc(uid)
-      .collection('todos')
-      .doc(todo.todoID)
-      .update({ ...todo, isDone: !todo.isDone });
+    dispatch(changeTodoFB(uid, todo.todoID, todo.isDone));
   };
   const onRemove = () => {
-    dispatch(removeTodoFB('U44iUzQterSkDVMoIsjJZlhyJGx2', todo.todoID));
-    // firestore.collection('users').doc(uid).collection('todos').doc(todo.todoID).delete();
+    dispatch(removeTodoFB(uid, todo.todoID));
   };
   return (
     <div className={styles.todoItem}>

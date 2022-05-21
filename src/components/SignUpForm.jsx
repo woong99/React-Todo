@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addAccount } from '../redux/modules/users';
 import styles from '../styles/SignUpForm.module.css';
 
 const SignUpForm = () => {
@@ -13,7 +12,6 @@ const SignUpForm = () => {
   const pwd = useRef();
   const userImg = useRef();
   const onSignUp = () => {
-    dispatch(addAccount([name.current.value, id.current.value, pwd.current.value]));
     navigate('/');
   };
   const onImg = () => {

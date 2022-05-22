@@ -10,10 +10,10 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import rrfProps from './firebase';
 
-const state = () => {
-  console.log(store.getState());
-};
-store.subscribe(state);
+// const state = () => {
+//   console.log(store.getState());
+// };
+// store.subscribe(state);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

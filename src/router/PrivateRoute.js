@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import isLogin from './isLogin';
+import useIsLogin from './useIsLogin';
 
 const PrivateRoute = () => {
-  const isAdmin = isLogin();
+  const isAdmin = useIsLogin();
   return isAdmin ? <Outlet /> : <Navigate to="/" />;
 };
 

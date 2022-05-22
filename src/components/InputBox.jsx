@@ -1,15 +1,14 @@
-import React, { useState, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { addTodo } from '../redux/modules/todos';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTodoFB } from '../redux/modules/todos';
 import styles from '../styles/InputBox.module.css';
 
 const InputBox = () => {
+  const uid = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const [input, setInput] = useState('');
-  const id = useRef(3);
   const click = () => {
-    dispatch(addTodo([input, id.current]));
-    id.current += 1;
+    dispatch(addTodoFB(uid, { title: input, isDone: false }));
     setInput('');
   };
   const onChangeInput = (e) => {

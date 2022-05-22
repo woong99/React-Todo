@@ -6,7 +6,7 @@ const Info = () => {
   return (
     <div className={styles.container}>
       {/* <img src={user.img} alt="얼굴" width="200px" height="200px" /> */}
-      <p>{user[0].name}</p>
+      {/* <p>{user[0].name}</p> */}
     </div>
   );
 };

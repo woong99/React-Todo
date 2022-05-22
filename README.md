@@ -1,4 +1,4 @@
-# React-TodoList v2.5
+# React-TodoList v3.0
 
 투두리스트틀 만들고 업데이트 시키면서 리액트의 기초부터 공부!!
 
@@ -92,6 +92,8 @@ src
 - redux
 - react-redux
 - redux-actions
+- redux-thunk
+- firebase
 
 ---
 
@@ -109,15 +111,17 @@ src
 - react-redux를 통해 컴포넌트와 리덕스를 연결
 - redux ducks pattern
 - redux-actions를 이용해 모듈화 및 ducks pattern 적용
+- firebase를 이용한 데이터베이스 구축 및 로그인 기능 구현
+- redux-thunk를 이용한 비동기 처리
 
 ---
 
 ## 🤪 업데이트 예정 🤪
 
-- FireBase를 이용한 DB 관리 및 auth 구현
+- 학교 후배가 만들어준 UI로 변경
 
 ---
 
 ## 🎖 배운 점 🎖
 
-Context API와 redux의 차이점을 공부하고 redux의 사용법부터 심화 과정까지 공부할 수 있었다. Context API와 크게 다른 점은 없어서 쉽게 배울 수 있었다. 아직은 redux를 이용한 비동기 처리는 사용하지 않았지만 나중에는 react-sage까지 공부할 예정이다.
+firebase를 이용한 데이터베이스 구축 및 로그인 기능을 구현해보았다. 처음에는 firebase와 redux를 같이 써보려 구글링하던 중 react-redux-firebase를 발견해 사용해보았다. 따로 redux를 건들지 않아도 알아서 연결 및 저장해 주어서 편했지만 비동기 처리 과정에서 많은 어려움이 있었다. 아직 내가 한참 부족해 기능을 제대로 이용하지 못한것도 있고, 공식 문서도 다 영어고 한글로 된 자료가 거의 없었다. 그래서 결국에는 순수 firebase와 redux, redux-thunk를 이용해 비동기 처리를 할 수 밖에 없었다. 남들이 만들어놓은 라이브러리를 사용하는 것이 더 편하지만 지금은 내가 학습을 하는 과정이므로 직접 구현해보는것이 더 좋았다고 생각한다.

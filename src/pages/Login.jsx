@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import LoginForm from '../components/LoginForm';
 import styles from '../styles/Login.module.css';
 

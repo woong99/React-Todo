@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodoFB } from '../redux/modules/todos';
-import styles from '../styles/InputBox.module.css';
+import { addTodoFB } from '../../redux/modules/todos';
+import styles from './InputBox.module.scss';
 
 const InputBox = () => {
   const uid = useSelector((state) => state.user);
@@ -20,7 +20,7 @@ const InputBox = () => {
     }
   };
   return (
-    <div className={styles.inputBox_container}>
+    <div className={styles.container}>
       <input
         className={styles.inputBox}
         placeholder="웅교씨의 투 두 리스트를 입력하시오"

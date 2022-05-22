@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import SignUpForm from '../components/SignUpForm';
 import styles from '../styles/SignUp.module.css';
 const SignUp = () => {

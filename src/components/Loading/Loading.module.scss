@@ -1,0 +1,17 @@
+.loading {
+  border: 4px solid white;
+  border-color: white white white transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spinning 1s linear infinite;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

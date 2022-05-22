@@ -1,0 +1,87 @@
+@import '../../styles/mixin.module';
+p {
+  color: rgb(94, 129, 63);
+  text-align: center;
+}
+// 모바일
+.welcome {
+  animation: fade-in 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+  p {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+.container {
+  p {
+    font-size: 34px;
+  }
+  opacity: 0;
+  animation: mobile-fade-out 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    button {
+      @include green-button(140px, 40px, 16px);
+      margin-right: 10px;
+    }
+  }
+}
+
+// 데스크탑
+@media (min-width: 768px) {
+  .welcome {
+    p {
+      font-size: 70px;
+      font-weight: 700;
+    }
+  }
+  .container {
+    margin: 0 auto;
+    width: 500px;
+    p {
+      font-size: 60px;
+      font-weight: 700;
+    }
+    .buttonContainer {
+      button {
+        @include green-button(150px, 40px, 20px);
+        &:first-child {
+          margin-right: 100px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 200px;
+  }
+}
+
+@keyframes mobile-fade-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 150px;
+  }
+}

@@ -69,7 +69,13 @@ function reducer(state = initialState, action) {
   if (action.type === LOAD_TODO) {
     return [
       ...state,
-      { title: action.todo.title, isDone: action.todo.isDone, todoID: action.todo.id },
+      {
+        title: action.todo.title,
+        isDone: action.todo.isDone,
+        todoID: action.todo.id,
+        color: action.todo.color,
+        star: action.todo.star,
+      },
     ];
   }
 

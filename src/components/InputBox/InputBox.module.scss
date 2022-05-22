@@ -1,13 +1,13 @@
-.inputBox_container {
-  width: 512px;
+.container {
+  width: 80%;
   height: 35px;
-  background-color: #f9ecd9;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding-bottom: 20px;
 }
 .inputBox {
-  width: 400px;
+  // width: 400px;
   font-size: 18px;
   font-weight: 600;
   border: 0;

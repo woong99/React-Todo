@@ -1,0 +1,12 @@
+@import './common.module';
+
+@mixin green-button($width, $height, $font-size) {
+  background-color: $green;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+  cursor: pointer;
+}

@@ -67,6 +67,7 @@ const initialState = [];
 // 리듀서
 function reducer(state = initialState, action) {
   if (action.type === LOAD_TODO) {
+    console.log(action);
     return [
       ...state,
       {
@@ -74,14 +75,24 @@ function reducer(state = initialState, action) {
         isDone: action.todo.isDone,
         todoID: action.todo.id,
         color: action.todo.color,
-        star: action.todo.star,
+        significant: action.todo.significant,
+        category: action.todo.category,
       },
     ];
   }
 
   if (action.type === ADD_TODO) {
-    console.log(action);
-    return [...state, { title: action.todo.title, isDone: false, todoID: action.todo.id }];
+    return [
+      ...state,
+      {
+        category: action.todo.category,
+        isDone: false,
+        todoID: action.todo.id,
+        color: action.todo.color,
+        title: action.todo.title,
+        significant: action.todo.significant,
+      },
+    ];
   }
 
   if (action.type === REMOVE_TODO) {

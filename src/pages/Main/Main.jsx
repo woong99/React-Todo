@@ -19,16 +19,6 @@ const Main = () => {
         <TodoItemList />
       </div>
       <Input />
-      {/* <div className={styles.left}>
-        <Info />
-        <Weather />
-      </div>
-      <div className={styles.right}>
-        <InputHeader />
-        <InputBox />
-        <TodoCount />
-        <TodoItemList />
-      </div> */}
     </div>
   );
 };

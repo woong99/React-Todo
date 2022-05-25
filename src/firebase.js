@@ -1,8 +1,6 @@
 import firebase from 'firebase/compat/app';
-import { createFirestoreInstance } from 'redux-firestore';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-import store from './redux/store';
 
 export const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -15,21 +13,9 @@ export const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+export default firebase.initializeApp(firebaseConfig);
 firebase.firestore();
 export const firebaseInstance = firebase;
 export const authService = firebase.auth();
-
-const rrfConfig = {
-  userProfile: 'users',
-  useFirestoreForProfile: true,
-};
-
-const rrfProps = {
-  firebase,
-  config: rrfConfig,
-  dispatch: store.dispatch,
-  createFirestoreInstance,
-};
-
-export default rrfProps;
+// const firestore = firebase.firestore();
+// export default firestore;

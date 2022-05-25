@@ -28,7 +28,12 @@
       background-color: rgb(114, 114, 114);
     }
   }
-  p {
+  .category {
+    color: black;
+    font-size: 24px;
+  }
+  .title {
+    margin-left: 10px;
     margin-right: 10px;
     font-size: 24px;
     font-weight: 500;
@@ -37,5 +42,39 @@
   .removeIcon {
     position: absolute;
     right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 모바일 */
+  .todoItem {
+    .aiFillStar {
+      width: 24px;
+    }
+    .fillCircle {
+      width: 12px;
+      height: 12px;
+      border: 3px solid rgb(114, 114, 114);
+      .innerCircle {
+        width: 4px;
+        height: 4px;
+        border: 1px solid rgb(114, 114, 114);
+      }
+    }
+    .emptyCircle {
+      width: 12px;
+      height: 12px;
+      border: 3px solid rgb(114, 114, 114);
+    }
+    .category {
+      font-size: 14px;
+    }
+    .title {
+      font-size: 14px;
+    }
+    .removeIcon {
+      width: 16px;
+      height: 16px;
+    }
   }
 }

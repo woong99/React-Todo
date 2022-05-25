@@ -10,6 +10,9 @@ const TodoItemList = () => {
     dispatch(loadTodoFB(uid));
   }, [dispatch, uid]);
   const todos = useSelector((state) => state.todos);
+  todos.sort((a, b) => {
+    return a.color.index - b.color.index;
+  });
   return (
     <div className={styles.todoItemListContainer}>
       {todos && Object.values(todos).map((data, index) => <TodoItem todo={data} key={index} />)}

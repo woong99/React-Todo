@@ -4,7 +4,6 @@ import Info from '../../components/Info';
 import InputBox from '../../components/InputBox/InputBox';
 import TodoCount from '../../components/TodoCount';
 import TodoItemList from '../../components/TodoItemList/TodoItemList';
-// import Weather from '../components/Weather';
 import styles from './Main.module.scss';
 import Header from '../../components/Header/Header';
 import TodoHeader from '../../components/TodoHeader/TodoHeader';

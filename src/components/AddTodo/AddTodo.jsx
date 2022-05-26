@@ -37,6 +37,7 @@ const AddTodo = (props) => {
       <div className={styles.color}>
         <label>Color |</label>
         <button
+          style={{ borderRadius: color.color === 'rgb(230,75,66)' ? '10px' : '0px' }}
           onClick={() => {
             setColor({ color: 'rgb(230,75,66)', index: 0 });
           }}
@@ -44,6 +45,7 @@ const AddTodo = (props) => {
           {color.color === 'rgb(230,75,66)' ? '✔' : ''}
         </button>
         <button
+          style={{ borderRadius: color.color === 'rgb(233,138,75)' ? '10px' : '0px' }}
           onClick={() => {
             setColor({ color: 'rgb(233,138,75)', index: 1 });
           }}
@@ -51,39 +53,44 @@ const AddTodo = (props) => {
           {color.color === 'rgb(233,138,75)' ? '✔' : ''}
         </button>
         <button
+          style={{ borderRadius: color.color === 'rgb(230,181,90)' ? '10px' : '0px' }}
           onClick={() => {
-            setColor({ color: 'rgb(230, 181, 90)', index: 2 });
+            setColor({ color: 'rgb(230,181,90)', index: 2 });
           }}
         >
-          {color.color === 'rgb(230, 181, 90)' ? '✔' : ''}
+          {color.color === 'rgb(230,181,90)' ? '✔' : ''}
         </button>
         <button
+          style={{ borderRadius: color.color === 'rgb(129,199,141)' ? '10px' : '0px' }}
           onClick={() => {
-            setColor({ color: 'rgb(129, 199, 141)', index: 3 });
+            setColor({ color: 'rgb(129,199,141)', index: 3 });
           }}
         >
-          {color.color === 'rgb(129, 199, 141)' ? '✔' : ''}
+          {color.color === 'rgb(129,199,141)' ? '✔' : ''}
         </button>
         <button
+          style={{ borderRadius: color.color === 'rgb(159,198,244)' ? '10px' : '0px' }}
           onClick={() => {
-            setColor({ color: 'rgb(159, 198, 244)', index: 4 });
+            setColor({ color: 'rgb(159,198,244)', index: 4 });
           }}
         >
-          {color.color === 'rgb(159, 198, 244)' ? '✔' : ''}
+          {color.color === 'rgb(159,198,244)' ? '✔' : ''}
         </button>
         <button
+          style={{ borderRadius: color.color === 'rgb(44,77,118)' ? '10px' : '0px' }}
           onClick={() => {
-            setColor({ color: 'rgb(44, 77, 118)', index: 5 });
+            setColor({ color: 'rgb(44,77,118)', index: 5 });
           }}
         >
-          {color.color === 'rgb(44, 77, 118)' ? '✔' : ''}
+          {color.color === 'rgb(44,77,118)' ? '✔' : ''}
         </button>
         <button
+          style={{ borderRadius: color.color === 'rgb(138,119,176)' ? '10px' : '0px' }}
           onClick={() => {
-            setColor({ color: 'rgb(138, 119, 176)', index: 6 });
+            setColor({ color: 'rgb(138,119,176)', index: 6 });
           }}
         >
-          {color.color === 'rgb(138, 119, 176)' ? '✔' : ''}
+          {color.color === 'rgb(138,119,176)' ? '✔' : ''}
         </button>
       </div>
       <div className={styles.todo}>

@@ -1,0 +1,71 @@
+@import '../../styles/mixin.module';
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669f2;
+
+* {
+  font-family: 'Jua', sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+    input {
+      @include green-input(384px, 60px);
+    }
+    button {
+      margin-bottom: 20px;
+      background-color: $light-green;
+      border: none;
+      border-radius: 10px;
+      height: 60px;
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .googleBtn {
+      cursor: pointer;
+      height: 60px;
+      background-color: $light-green;
+      border-radius: 10px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      .googleIconWrapper {
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 58px;
+        height: 58px;
+        border-radius: 10px;
+        background-color: $light-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+        .googleIcon {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      .btnText {
+        color: white;
+        font-size: 24px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+  .function {
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 50px;
+    border: 2px solid rgb(114, 176, 71);
+  }
+}

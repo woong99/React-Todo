@@ -1,0 +1,73 @@
+@import '../../styles/mixin.module';
+* {
+  font-family: 'Jua', sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  .form {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+    .fileBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 200px;
+
+      .uploadImg {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: rgb(231, 230, 230);
+        border: 3px solid rgb(139, 157, 103);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        img {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+        }
+      }
+      label {
+        border: 3px solid rgb(166, 166, 166);
+        border-radius: 10px;
+        width: 120px;
+        background-color: rgb(242, 242, 242);
+        display: block;
+        text-align: center;
+        cursor: pointer;
+      }
+      input[type='file'] {
+        display: none;
+      }
+    }
+    .textInput {
+      display: flex;
+      flex-direction: column;
+      input {
+        @include green-input(384px, 60px);
+      }
+    }
+  }
+  button {
+    width: 400px;
+    margin-bottom: 20px;
+    background-color: $light-green;
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

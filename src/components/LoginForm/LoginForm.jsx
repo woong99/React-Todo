@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addUser } from '../redux/modules/user';
-import styles from '../styles/LoginForm.module.css';
+import { addUser } from '../../redux/modules/user';
+import styles from './LoginForm.module.scss';
 import {
   getAuth,
   GoogleAuthProvider,
@@ -22,9 +22,6 @@ const LoginForm = () => {
       navigate('/main');
     });
   };
-  const onSignUp = () => {
-    navigate('./signUp');
-  };
 
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
@@ -38,15 +35,21 @@ const LoginForm = () => {
   return (
     <div className={styles.container}>
       <div className={styles.form}>
-        <div className={styles.title}>
-          <p>LOGIN</p>
+        <input type="text" placeholder="ID" name="username" ref={id} />
+        <input type="password" placeholder="PASSWORD" name="password" ref={pwd} />
+        <button onClick={onLogin}>Sign in</button>
+        <div className={styles.googleBtn} onClick={signInWithGoogle}>
+          <div className={styles.googleIconWrapper}>
+            <img
+              className={styles.googleIcon}
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              alt="google"
+            />
+          </div>
+          <p className={styles.btnText}>Sign in with google</p>
         </div>
-        <input type="text" placeholder="아이디" name="username" ref={id} />
-        <input type="password" placeholder="비밀번호" name="password" ref={pwd} />
-        <button onClick={onLogin}>로그인</button>
-        <button onClick={signInWithGoogle}>구글로그인</button>
-        <button onClick={onSignUp}>회원가입</button>
       </div>
+      <div className={styles.function}></div>
     </div>
   );
 };

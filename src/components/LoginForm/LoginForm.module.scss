@@ -10,11 +10,16 @@ $button-active-blue: #1669f2;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
   .form {
     width: 400px;
     display: flex;
     flex-direction: column;
     margin-right: 150px;
+    & > p {
+      display: none;
+    }
     input {
       @include green-input(384px, 60px);
     }
@@ -67,5 +72,65 @@ $button-active-blue: #1669f2;
     background-color: rgb(242, 242, 242);
     border-radius: 50px;
     border: 2px solid rgb(114, 176, 71);
+  }
+  .goToSignUp {
+    margin-top: 50px;
+    p {
+      font-size: 24px;
+      color: rgb(169, 169, 169);
+      span {
+        cursor: pointer;
+        color: rgb(145, 156, 114);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  // 모바일
+  .container {
+    flex-direction: column;
+    .form {
+      width: 300px;
+      margin-right: 0;
+      margin-top: 60px;
+      align-items: center;
+      & > p {
+        display: block;
+        margin-right: auto;
+        font-size: 24px;
+      }
+      input {
+        @include green-input(300px, 50px);
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      button {
+        width: 300px;
+        font-size: 18px;
+        height: 50px;
+      }
+      .googleBtn {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        justify-content: left;
+        .googleIconWrapper {
+          margin-top: 0px;
+          margin-right: 30px;
+          height: 50px;
+          width: 50px;
+        }
+        .btnText {
+          font-size: 18px;
+        }
+      }
+    }
+    .function {
+      display: none;
+    }
+    .goToSignUp {
+      margin-top: 100px;
+    }
   }
 }

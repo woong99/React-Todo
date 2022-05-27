@@ -32,15 +32,11 @@ const SignUpForm = () => {
     };
     reader.readAsDataURL(theFile);
   };
-  const onClearAttachment = () => {
-    setAttachment(null);
-    setFile('');
-  };
-  const onSubmit = async (event) => {
-    event.preventDefault();
+
+  const onSubmit = async (uid) => {
     let attachmentUrl = '';
     if (attachment !== '') {
-      const attachmentRef = storageService.ref().child(`/${uuidv4()}`);
+      const attachmentRef = storageService.ref().child(`${uid}/${uuidv4()}`);
       const response = await attachmentRef.putString(attachment, 'data_url');
       attachmentUrl = await response.ref.getDownloadURL();
     }
@@ -51,7 +47,6 @@ const SignUpForm = () => {
       attachmentUrl,
     };
     await dbService.collection('posts').add(postObj);
-    // setNweet('');
     setAttachment('');
     setFile('');
   };
@@ -61,6 +56,7 @@ const SignUpForm = () => {
     createUserWithEmailAndPassword(auth, id.current.value, pwd.current.value)
       .then((userCredential) => {
         dispatch(addUser(userCredential.user.uid));
+        onSubmit(userCredential.user.uid);
         navigate('/main');
       })
       .catch((error) => console.log(error.code));
@@ -98,7 +94,7 @@ const SignUpForm = () => {
         </div>
       </div>
       <button onClick={onSignUp}>회원가입</button>
-      <button onClick={onSubmit}>뒤로가기</button>
+      <button onClick={onBack}>뒤로가기</button>
     </div>
   );
 };

@@ -1,8 +1,5 @@
 import React from 'react';
-import InputHeader from '../../components/InputHeader';
-import Info from '../../components/Info';
-import InputBox from '../../components/InputBox/InputBox';
-import TodoCount from '../../components/TodoCount';
+import TodoCount from '../../components/TodoCount/TodoCount';
 import TodoItemList from '../../components/TodoItemList/TodoItemList';
 import styles from './Main.module.scss';
 import Header from '../../components/Header/Header';
@@ -18,6 +15,7 @@ const Main = () => {
         <TodoItemList />
       </div>
       <Input />
+      <TodoCount />
     </div>
   );
 };

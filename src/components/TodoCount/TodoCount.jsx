@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import styles from '../styles/TodoCount.module.css';
+import styles from './TodoCount.module.scss';
 
 const TodoCount = () => {
   const todos = useSelector((state) => state.todos);
@@ -18,9 +18,9 @@ const TodoCount = () => {
 
   return (
     <div className={styles.container}>
-      <p>전체 : {todos.length}</p>
-      <p>미완료 : {doneCount}</p>
-      <p>완료 : {todos.length - doneCount}</p>
+      <p>All : {todos.length}</p>
+      <p>Incomplete : {doneCount}</p>
+      <p>Complete : {todos.length - doneCount}</p>
     </div>
   );
 };

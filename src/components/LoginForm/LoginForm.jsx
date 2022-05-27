@@ -28,13 +28,14 @@ const LoginForm = () => {
     const auth = getAuth();
     signInWithPopup(auth, provider).then((result) => {
       dispatch(addUser(result.user.uid));
-      navigate('./main');
+      navigate('/main');
     });
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.form}>
+        <p>Login to your Account</p>
         <input type="text" placeholder="ID" name="username" ref={id} />
         <input type="password" placeholder="PASSWORD" name="password" ref={pwd} />
         <button onClick={onLogin}>Sign in</button>
@@ -50,6 +51,11 @@ const LoginForm = () => {
         </div>
       </div>
       <div className={styles.function}></div>
+      <div className={styles.goToSignUp}>
+        <p>
+          Don't have an account?<span> Sign up</span>
+        </p>
+      </div>
     </div>
   );
 };

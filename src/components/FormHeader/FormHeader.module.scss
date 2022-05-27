@@ -2,6 +2,7 @@
   border-bottom: 4px solid rgb(135, 160, 96);
   display: flex;
   align-items: center;
+  margin-top: 50px;
   .square {
     width: 15px;
     height: 50px;
@@ -14,5 +15,19 @@
     text-align: left;
     margin-bottom: 10px;
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  // 모바일
+  .container {
+    margin-top: 50px;
+    .square {
+      width: 15px;
+      height: 40px;
+    }
+    p {
+      font-size: 40px;
+    }
   }
 }

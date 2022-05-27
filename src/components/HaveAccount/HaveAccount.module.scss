@@ -27,6 +27,7 @@ p {
     button {
       @include green-button(140px, 40px, 16px);
       margin-right: 10px;
+      cursor: pointer;
     }
   }
 }
